@@ -24,7 +24,7 @@ const Navbar = () => {
               <Link className="" to="/cart">
               <IoIosCart size={40} />
               </Link>
-              <Link> 
+              <Link to='login'> 
               <button className="text-2xl font-semibold bg-gray-200 hover:bg-gray-400 p-2 borde rounded-md">Log In</button>
               </Link>
             </div>
