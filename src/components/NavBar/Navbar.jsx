@@ -1,6 +1,7 @@
 import React from "react";
 import localstore from "../../components/assets/logo.png";
 import { Link } from "react-router-dom";
+import { IoIosCart } from "react-icons/io";
 const Navbar = () => {
   console.log(localstore);
   return (
@@ -20,10 +21,12 @@ const Navbar = () => {
               <Link className="mr-7">Kids</Link>
             </div>
             <div className="flex justify-center items-center gap-10 mr-20 ">
-              <Link className="inline-flex items-center " to="/cart">
-                Cart
+              <Link className="" to="/cart">
+              <IoIosCart size={40} />
               </Link>
-              <Link>Log in</Link>
+              <Link> 
+              <button className="text-2xl font-semibold bg-gray-200 hover:bg-gray-400 p-2 borde rounded-md">Log In</button>
+              </Link>
             </div>
           </nav>
         </header>
