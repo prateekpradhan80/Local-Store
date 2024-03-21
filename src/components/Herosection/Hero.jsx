@@ -36,13 +36,13 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <section class="text-gray-600 body-font">
-          <div class="container px-5 py-16 mx-auto flex flex-wrap">
-            <div class="flex w-full mb-20 flex-wrap">
-              <h1 class="sm:text-3xl text-2xl  font-semibold font-serif title-font text-red-500 lg:w-1/3 lg:mb-0 mb-4">
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-16 mx-auto flex flex-wrap">
+            <div className="flex w-full mb-20 flex-wrap">
+              <h1 className="sm:text-3xl text-2xl  font-semibold font-serif title-font text-red-500 lg:w-1/3 lg:mb-0 mb-4">
                 Where Luxury Meets Simplicity
               </h1>
-              <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-lg font-serif ">
+              <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-lg font-serif ">
                 LOCAL STORE is an e-commerce platform that sells apparel, baby
                 products, consumer electronics, beauty products, gourmet food,
                 groceries, health and personal care products,kitchen items,
@@ -51,49 +51,49 @@ const Hero = () => {
                 farm supplies.
               </p>
             </div>
-            <div class="flex flex-wrap md:-m-2 -m-1">
-              <div class="flex flex-wrap w-1/2 hover:scale-75 hover:translate-x-4 hover:skew-y-3 transtion duration-500">
-                <div class="md:p-2 p-1 w-1/2">
+            <div className="flex flex-wrap md:-m-2 -m-1">
+              <div className="flex flex-wrap w-1/2 hover:scale-75 hover:translate-x-4 hover:skew-y-3 transtion duration-500">
+                <div className="md:p-2 p-1 w-1/2">
                   <img
                     alt="gallery"
-                    class=" w-full  object-cover h-full object-center block "
+                    className=" w-full  object-cover h-full object-center block "
                     src={jeans}
                   />
                 </div>
-                <div class="md:p-2 p-1 w-1/2">
+                <div className="md:p-2 p-1 w-1/2">
                   <img
                     alt="gallery"
-                    class="w-full object-cover h-full object-center block"
+                    className="w-full object-cover h-full object-center block"
                     src={dress}
                   />
                 </div>
-                <div class="md:p-2 p-1 w-full">
+                <div className="md:p-2 p-1 w-full">
                   <img
                     alt="gallery"
-                    class="w-full h-full object-cover object-center block"
+                    className="w-full h-full object-cover object-center block"
                     src={shoes}
                   />
                 </div>
               </div>
-              <div class="flex flex-wrap w-1/2 hover:scale-75 hover:translate-x-4 hover:skew-x-3 transtion duration-500">
-                <div class="md:p-2 p-1 w-full">
+              <div className="flex flex-wrap w-1/2 hover:scale-75 hover:translate-x-4 hover:skew-x-3 transtion duration-500">
+                <div className="md:p-2 p-1 w-full">
                   <img
                     alt="gallery"
-                    class="w-full h-full object-cover object-center block"
+                    className="w-full h-full object-cover object-center block"
                     src={saree}
                   />
                 </div>
-                <div class="md:p-2 p-1 w-1/2">
+                <div className="md:p-2 p-1 w-1/2">
                   <img
                     alt="gallery"
-                    class="w-full object-cover h-full object-center block"
+                    className="w-full object-cover h-full object-center block"
                     src={lap}
                   />
                 </div>
-                <div class="md:p-2 p-1 w-1/2">
+                <div className="md:p-2 p-1 w-1/2">
                   <img
                     alt="gallery"
-                    class="w-full object-cover h-full object-center block"
+                    className="w-full object-cover h-full object-center block"
                     src={phone}
                   />
                 </div>

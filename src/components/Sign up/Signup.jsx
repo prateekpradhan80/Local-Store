@@ -1,5 +1,5 @@
 import React from "react";
- import cart from "../components/assets/cart.jpg"
+ import cart from "../assets/cart.jpg"
 const Signup = () => {
   return (
     <>
