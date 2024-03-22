@@ -4,7 +4,8 @@ import { useCart } from "../Context/CartProvider";
 
 const SingleProduct = (props) => {
   const [data, setData] = useState([]);
-  const { addToCart } = useCart();
+  const [buttonText, setButtonText] = useState("Add to Cart");
+  const { addToCart, cart, setCart } = useCart();
   useEffect(() => {
     if (props.liveProduct) {
       fetch(`https://dummyjson.com/products/`)
@@ -16,8 +17,15 @@ const SingleProduct = (props) => {
         .then((res) => setData(res.products));
     }
   }, [props.selectProduct, props.liveProduct]);
+
   function handleAddToCart(product) {
-    addToCart(product);
+   const isProductInCart = cart.filter((item) => item.id === product.id ).length>0;
+
+    // If the product is not in the cart, add it
+    if (!isProductInCart) {
+      addToCart(product);
+      
+    }
   }
   return (
     <div className=" flex flex-wrap gap-7 justify-center  mt-10">

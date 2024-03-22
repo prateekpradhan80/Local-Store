@@ -2,11 +2,14 @@ import React from "react";
 import localstore from "../../components/assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosCart } from "react-icons/io";
+
+import { useCart } from "../Context/CartProvider";
 const Navbar = () => {
+  const { cart } = useCart();
   return (
     <>
       <div>
-        <header className="bg-white border-b border-x-gray-200 ">
+        <header className="bg-white border-b border-x-gray-200     ">
           <nav className="conatainer   flex justify-between p-1  ">
             <NavLink to="/">
               <img className="w-48 h-25  " src={localstore} alt="logo" />
@@ -31,9 +34,12 @@ const Navbar = () => {
               <NavLink className="mr-7">Men</NavLink>
               <NavLink className="mr-7">Kids</NavLink>
             </div>
-            <div className="flex justify-center items-center gap-10 mr-20 ">
-              <NavLink className="" to="/cart">
-                <IoIosCart size={40} />
+            <div className="flex justify-center items-center gap-10 mr-20 mb-3 ">
+              <NavLink className="relative" to="/cart">
+                <p className="text-md  ml-7  font-bold px-1 text-white bg-red-400 rounded-2xl absolute  bottom-7 ">
+                  {cart.length > 0 ? cart.length : null}
+                </p>
+                <IoIosCart className="size-12" />
               </NavLink>
               <Link to="login">
                 <button className="text-2xl font-semibold bg-gray-200 hover:bg-gray-400 p-2 borde rounded-md">
