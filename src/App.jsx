@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Route,
   RouterProvider,
@@ -7,14 +7,15 @@ import {
 } from "react-router-dom";
 
 import { Layout } from "./components/Layout/Layout.jsx";
-import Home from "./components/Home/Home.jsx";
-import Cart from "./components/Cart/Cart.jsx";
+import Home from "./components/Pages/Home/Home.jsx";
+import Cart from "./components/Pages/Cart/Cart.jsx";
 import User from "./components/User/User.jsx";
-import Login from "./components/Log in/Login.jsx";
-import Signup from "./components/Sign up/Signup.jsx";
-import AllProducts from "./components/All Products/AllProducts.jsx";
-import { productInfoLoader } from "./components/All Products/AllProducts.jsx";
+import Login from "./components/Authentication/Log in/Login.jsx";
+import Signup from "./components/Authentication/Sign up/Signup.jsx";
+import AllProducts from "./components/Pages/All Products/AllProducts.jsx";
+import { productInfoLoader } from "./components/Pages/All Products/AllProducts.jsx";
 import { CartProvider } from "./components/Context/CartProvider.jsx";
+import AboutUs from "./components/Pages/AboutUs/AboutUs.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
         path="products"
         element={<AllProducts />}
       />
+      <Route path="aboutUs" element={<AboutUs />} />
     </Route>
   )
 );

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useCart } from "../Context/CartProvider";
+import { useCart } from "../../Context/CartProvider";
 import { useNavigate, Link } from "react-router-dom";
-import ss from "../assets/ss.png";
+import ss from "../../assets/ss.png";
 const Cart = () => {
   const [validPromo, setValidPromo] = useState(null);
   const navigate = useNavigate();
@@ -46,13 +46,13 @@ const Cart = () => {
   };
 
   function applyPromoCode() {
-    if (promoCode == "PRATEEK80" && !clicked) {
-      setClicked(true);
+    if (promoCode == "PRATEEK80"   ) {
+      
       setValidPromo("promo code applied sucessfully ( ͡• ͜ʖ ͡• )");
       setDiscount(getTotalPrice() * 0.2);
-    } else if (!clicked) {
+    } else     
       setValidPromo("invalid code enter correct promocode ");
-    }
+    
   }
   return (
     <>

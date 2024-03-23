@@ -1,5 +1,5 @@
 import React from "react";
-import localstore from "../../components/assets/logo.png";
+import localstore from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosCart } from "react-icons/io";
 
@@ -31,8 +31,8 @@ const Navbar = () => {
               >
                 All Products
               </NavLink>
-              <NavLink className="mr-7">Men</NavLink>
-              <NavLink className="mr-7">Kids</NavLink>
+              <NavLink to='aboutUs' className={({isActive})=> ` mr-7 ${ isActive ? 'text-orange-700' : 'text-gray-700'} `} >About Us </NavLink>
+              <NavLink className="mr-7">Contact</NavLink>
             </div>
             <div className="flex justify-center items-center gap-10 mr-20 mb-3 ">
               <NavLink className="relative" to="/cart">

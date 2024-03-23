@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import productImg from "../assets/productImg.jpg";
-import SingleProduct from "../SingleProducts/SingleProduct";
+import productImg from "../../assets/productImg.jpg";
+import SingleProduct from '../SingleProduct/SingleProduct'
 
 export const productInfoLoader = async () => {
   const response = await fetch("https://dummyjson.com/products/categories");
