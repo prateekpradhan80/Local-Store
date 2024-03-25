@@ -32,7 +32,7 @@ const Navbar = () => {
                 All Products
               </NavLink>
               <NavLink to='aboutUs' className={({isActive})=> ` mr-7 ${ isActive ? 'text-orange-700' : 'text-gray-700'} `} >About Us </NavLink>
-              <NavLink className="mr-7">Contact</NavLink>
+              <NavLink to='contact' className={({isActive})=>`mr-7 ${isActive? 'text-orange-700':'text-gray-700'} `}>Contact</NavLink>
             </div>
             <div className="flex justify-center items-center gap-10 mr-20 mb-3 ">
               <NavLink className="relative" to="/cart">

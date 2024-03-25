@@ -29,20 +29,20 @@ const SingleProduct = (props) => {
   }
   return (
     <div className=" flex flex-wrap gap-7 justify-center  mt-10">
-      {data ? (
+      {  data ? (
         data.map((product, index) => (
           <div
             className="border shadow-2xl p-3 w-[20vw] h-fit   bg-red-100"
             key={index}
           >
             <img
-              className="hover:scale-90 transition duration-500  max-h-64 w-full    "
+              className="hover:scale-90 transition duration-500  max-h-48 w-full    "
               src={product.thumbnail}
             />
             <p className="text-red-600 text-lg   font-semibold  ">
               {product.title}
             </p>
-            <p className="text-gray-700">{product.description}</p>
+            
             <p className="font-mono">
               Price: ₹{product.price} | | Stock : {product.stock}{" "}
             </p>

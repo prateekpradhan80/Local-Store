@@ -16,6 +16,7 @@ import AllProducts from "./components/Pages/All Products/AllProducts.jsx";
 import { productInfoLoader } from "./components/Pages/All Products/AllProducts.jsx";
 import { CartProvider } from "./components/Context/CartProvider.jsx";
 import AboutUs from "./components/Pages/AboutUs/AboutUs.jsx";
+import Contact from "./components/Pages/Contact/Contact.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
         element={<AllProducts />}
       />
       <Route path="aboutUs" element={<AboutUs />} />
+      <Route path="contact" element={<Contact/>} />
     </Route>
   )
 );
