@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import productImg from "../../assets/productImg.jpg";
-import SingleProduct from "../SingleProduct/SingleProduct";
-import { useRef } from "react";
+import productImg from "../../assets/productImg.jpg"; 
+import Products from "../Products/Products";
 export const productInfoLoader = async () => {
   const response = await fetch("https://dummyjson.com/products/categories");
   return response.json();
@@ -13,7 +12,7 @@ const AllProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState();
   const [liveProduct, setliveProduct] = useState(true);
   const product = useLoaderData();
-  const [searchItem, setSearchItem] = useState('');
+  
   /*   using this you can also create but it is taking some time to render , but using loader it takes less to time render
   const [product, setProduct] = useState([]);
   useEffect(() => {
@@ -27,10 +26,7 @@ const AllProducts = () => {
     setSelectedProduct(product);
   }
 
-  function searchProduct(e) {
-    setSearchItem(e.target.value);
-    console.log(searchItem)
-  }
+  
   return (
     <>
       <div className="relative">
@@ -52,20 +48,11 @@ const AllProducts = () => {
             <p>Loading...</p>
           )}
         </div>
-        <div className=" flex justify-center items-center mt-4 ">
-
-          {/* Filter functionality  */}
-          <input
-            className="bg-gray-200 w-[30vw] rounded-lg    p-4 "
-            placeholder="Search for Products  "
-            value={searchItem}
-            onChange={searchProduct}
-          />
-        </div>
-        <SingleProduct
+        
+        <Products
           selectProduct={selectedProduct}
           liveProduct={liveProduct}
-          searchItem={searchItem}
+         
         />
         ;
       </div>

@@ -46,13 +46,10 @@ const Cart = () => {
   };
 
   function applyPromoCode() {
-    if (promoCode == "PRATEEK80"   ) {
-      
+    if (promoCode == "PRATEEK80") {
       setValidPromo("promo code applied sucessfully ( ͡• ͜ʖ ͡• )");
       setDiscount(getTotalPrice() * 0.2);
-    } else     
-      setValidPromo("invalid code enter correct promocode ");
-    
+    } else setValidPromo("invalid code enter correct promocode ");
   }
   return (
     <>
@@ -61,9 +58,8 @@ const Cart = () => {
           <img className="  w-[70vw] h-[80vh] " src={ss} />{" "}
           <button
             className="   text-3xl font-serif bg-red-400  rounded-full p-9 mb-8 hover:bg-red-100 "
-            onClick={() => navigate("/products")}
+            onClick={() => navigate("/allproducts")}
           >
-            
             Add Items to cart
           </button>
         </div>
@@ -143,9 +139,15 @@ const Cart = () => {
                       +
                     </button>
                   </span>
+
+                  {/*item price */}
+
                   <span className="text-center w-1/5 font-semibold text-sm">
                     ₹ {item.price}
                   </span>
+
+                  {/*total Price*/}
+
                   <span className="text-center w-1/5 font-semibold text-sm">
                     ₹ {item.price * quantities[item.id] || item.price}
                   </span>
@@ -153,7 +155,7 @@ const Cart = () => {
               ))}
 
               <button
-                onClick={() => navigate("/products")}
+                onClick={() => navigate("/allproducts")}
                 className="flex font-semibold text-indigo-600 text-sm mt-10"
               >
                 Continue Shopping

@@ -10,6 +10,7 @@ import shoes from "../../assets/shoes.jpg";
 import saree from "../../assets/saree.jpg";
 import lap from "../../assets/Lap.jpeg";
 import phone from "../../assets/phn.jpeg";
+import { Link } from "react-router-dom";
 import { useCart } from "../../Context/CartProvider";
 const Hero = () => {
   const [popularProduct, setPopularProduct] = useState([]);
@@ -54,7 +55,7 @@ const Hero = () => {
       <div>
         {/*     that paragraph   /// Popular products and hovered image  */}
 
-        <section className="text-gray-600 body-font ">
+        <section className="text-gray-600 body-font mb-5 ">
           <div className="container px-5 py-10  mx-auto my-5 flex flex-wrap">
             {/*     that paragraph  */}
 
@@ -83,13 +84,13 @@ const Hero = () => {
                   className="lg:w-1/4 md:w-1/2 p-2 mx-2  w-full mb-28 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg"
                   key={index}
                 >
-                  <a className="block relative h-60 rounded overflow-hidden">
+                  <Link to={`/product/${item.id}`} className="block relative h-60 rounded overflow-hidden">
                     <img
                       alt="ecommerce"
                       className=" w-full h-full block transform transition-transform duration-300 hover:scale-110"
                       src={item.images[0]}
                     />
-                  </a>
+                  </Link>
                   <div className="mt-4">
                     <h2 className="text-red-900 title-font text-lg font-medium">
                       {item.title}
@@ -113,7 +114,7 @@ const Hero = () => {
 
           {/*   that hoverd images  */}
 
-          <div className="flex flex-wrap md:-m-2 -m-1">
+          <div className="flex flex-wrap md:-m-2   ">
             <div className="flex flex-wrap w-1/2 hover:scale-75 hover:translate-x-4 hover:skew-y-3 transtion duration-500">
               <div className="md:p-2 p-1 w-1/2 ">
                 <img

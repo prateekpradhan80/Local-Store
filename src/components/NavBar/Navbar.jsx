@@ -8,8 +8,8 @@ const Navbar = () => {
   const { cart } = useCart();
   return (
     <>
-      <div>
-        <header className="bg-white border-b border-x-gray-200     ">
+      <div className="mb-20 ">
+        <header className=" fixed top-0 w-full z-50 bg-white border-b border-gray-200       ">
           <nav className="conatainer   flex justify-between p-1  ">
             <NavLink to="/">
               <img className="w-48 h-25  " src={localstore} alt="logo" />
@@ -24,7 +24,7 @@ const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/products"
+                to="allproducts"
                 className={({ isActive }) =>
                   ` mr-7 ${isActive ? "text-orange-700" : "text-gray-700"} `
                 }
