@@ -6,6 +6,8 @@ import { IoIosCart } from "react-icons/io";
 import { useCart } from "../Context/CartProvider";
 const Navbar = () => {
   const { cart } = useCart();
+ const userData = JSON.parse(localStorage.getItem('user') ) ;
+  
   return (
     <>
       <div className="mb-20 ">
@@ -43,7 +45,7 @@ const Navbar = () => {
               </NavLink>
               <Link to="login">
                 <button className="text-2xl font-semibold bg-gray-200 hover:bg-gray-400 p-2 borde rounded-md">
-                  Log In
+                   Login
                 </button>
               </Link>
             </div>

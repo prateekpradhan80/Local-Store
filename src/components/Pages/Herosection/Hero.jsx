@@ -14,14 +14,14 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../Context/CartProvider";
 const Hero = () => {
   const [popularProduct, setPopularProduct] = useState([]);
-   const{addToCart}=useCart();
+  const { addToCart } = useCart();
   useEffect(() => {
     fetch("https://dummyjson.com/products/search?q=phone")
       .then((res) => res.json())
       .then((data) => setPopularProduct(data.products));
   }, []);
-  console.log(popularProduct);
-  function buttonClick(item){
+
+  function buttonClick(item) {
     addToCart(item);
   }
   return (
@@ -84,7 +84,10 @@ const Hero = () => {
                   className="lg:w-1/4 md:w-1/2 p-2 mx-2  w-full mb-28 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg"
                   key={index}
                 >
-                  <Link to={`/product/${item.id}`} className="block relative h-60 rounded overflow-hidden">
+                  <Link
+                    to={`/product/${item.id}`}
+                    className="block relative h-60 rounded overflow-hidden"
+                  >
                     <img
                       alt="ecommerce"
                       className=" w-full h-full block transform transition-transform duration-300 hover:scale-110"
@@ -98,16 +101,21 @@ const Hero = () => {
                     <h3 className="text-black text-xs tracking-widest title-font mb-1">
                       {item.brand}
                     </h3>
-                    <span className="mt-1 font-semibold">Price: ₹{item.price}</span>
+                    <span className="mt-1 font-semibold">
+                      Price: ₹{item.price}
+                    </span>
                     <div className="">
-                    <span className="text-yellow-500">Ratings : {item.rating}⭐</span>
-                      <button onClick={()=>buttonClick(item)} className="  bg-blue-600 px-9 text-black  ml-11  text-xl rounded-lg  hover:scale-95 transition duration-500 hover:bg-green-500">Add to Cart</button>
-                       
+                      <span className="text-yellow-500">
+                        Ratings : {item.rating}⭐
+                      </span>
+                      <button
+                        onClick={() => buttonClick(item)}
+                        className="  bg-blue-600 px-9 text-black  ml-11  text-xl rounded-lg  hover:scale-95 transition duration-500 hover:bg-green-500"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
-
-                    
                   </div>
-
                 </div>
               ))}
           </div>
