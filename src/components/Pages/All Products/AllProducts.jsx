@@ -34,14 +34,14 @@ const AllProducts = () => {
         <div className="relative    ">
           <img className="w-full h-[40vh]" src={productImg}></img>
           <div className="absolute top-7">
-            <h1 className=" ml-5 text-3xl font-serif text-white">
+            <h1 className=" ml-5 text-2xl font-serif text-white">
               All PRODUCTS
             </h1>
 
             {product ? (
               product.map((product, index) => (
                 <button
-                  className=" border  bg-red-500 p-3  m-5 gap-2 rounded-lg  text-white hover:scale-110 transition duration-500"
+                  className=" border  bg-red-500 p-3 text-sm  m-5 gap-2 rounded-lg  text-white hover:scale-110 transition duration-500"
                   key={index}
                   onClick={() => handleButton(product)}
                 >

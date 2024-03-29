@@ -15,9 +15,9 @@ const Navbar = () => {
         <header className={`fixed top-0 w-full z-50 ${theme==='white'?'bg-white':`bg-${theme}-500`}`}>
           <nav className="conatainer   flex justify-between p-1 border-b ">
             <NavLink to="/">
-              <img className="w-48 h-25 rounded-full  " src={localstore} alt="logo" />
+              <img className="w-42 h-20 rounded-full  " src={localstore} alt="logo" />
             </NavLink>
-            <div className="flex  items-center justify-center ml-12   font-semibold text-xl font-serif   ">
+            <div className="flex  items-center justify-center ml-12   font-semibold text-lg font-serif   ">
               <NavLink
                 className={({ isActive }) =>
                   `   mr-7 ${isActive ? "text-orange-900" : "text-gray-700"} `
