@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Shimmer from "../../Shimmer/Shimmer";
-import { AiOutlineStar } from "react-icons/ai";
+ 
 const Products = (props) => {
   const [data, setData] = useState([]);
   const [star, setStar] = useState("");

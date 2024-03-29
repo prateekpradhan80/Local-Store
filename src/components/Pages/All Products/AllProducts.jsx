@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import productImg from "../../assets/productImg.jpg"; 
+import productImg from "../../assets/productImg.jpg";
 import Products from "../Products/Products";
 import { useCart } from "../../Context/CartProvider";
 export const productInfoLoader = async () => {
@@ -13,8 +13,8 @@ const AllProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState();
   const [liveProduct, setliveProduct] = useState(true);
   const product = useLoaderData();
-  const{theme}=useCart()
-  
+  const { theme } = useCart();
+
   /*   using this you can also create but it is taking some time to render , but using loader it takes less to time render
   const [product, setProduct] = useState([]);
   useEffect(() => {
@@ -28,39 +28,34 @@ const AllProducts = () => {
     setSelectedProduct(product);
   }
 
-  
   return (
     <>
-    <div className={'bg-'+theme+'-500'}>
-    <div className="relative    ">
-        <img className="w-full h-[40vh]" src={productImg}></img>
-        <div className="absolute top-7">
-          <h1 className=" ml-5 text-3xl font-serif text-white">All PRODUCTS</h1>
+      <div className={"bg-" + theme + "-500"}>
+        <div className="relative    ">
+          <img className="w-full h-[40vh]" src={productImg}></img>
+          <div className="absolute top-7">
+            <h1 className=" ml-5 text-3xl font-serif text-white">
+              All PRODUCTS
+            </h1>
 
-          {product ? (
-            product.map((product, index) => (
-              <button
-                className=" border  bg-red-500 p-3  m-5 gap-2 rounded-lg  text-white hover:scale-110 transition duration-500"
-                key={index}
-                onClick={() => handleButton(product)}
-              >
-                {product.toUpperCase()}
-              </button>
-            ))
-          ) : (
-            <p>Loading...</p>
-          )}
+            {product ? (
+              product.map((product, index) => (
+                <button
+                  className=" border  bg-red-500 p-3  m-5 gap-2 rounded-lg  text-white hover:scale-110 transition duration-500"
+                  key={index}
+                  onClick={() => handleButton(product)}
+                >
+                  {product.toUpperCase()}
+                </button>
+              ))
+            ) : (
+              <p>Loading...</p>
+            )}
+          </div>
+          <Products selectProduct={selectedProduct} liveProduct={liveProduct} />
+          ;
         </div>
-        
-        <Products
-          selectProduct={selectedProduct}
-          liveProduct={liveProduct}
-         
-        />
-        ;
       </div>
-    </div>
-     
     </>
   );
 };

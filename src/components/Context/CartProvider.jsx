@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
     setCart([...cart, product]);
   };
   const toggleTheme =()=>{
-    setTheme(theme==='white' ?'slate':'white')
+    setTheme(theme ==='white' ?'slate':'white')
   }
   return (
     <CartContext.Provider value={{ cart , setCart, addToCart,theme ,toggleTheme }}>
