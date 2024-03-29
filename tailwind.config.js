@@ -4,7 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  
+  safelist:[
+    'bg-slate-500',
+    'bg-white-500',
+  ],
   theme: {
     extend: {},
   },
