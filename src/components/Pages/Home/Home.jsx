@@ -2,7 +2,8 @@ import React from "react";
 import Hero from "../Herosection/Hero";
 
 const Home = () => {
-  return <div>
+  return <div className="">
+     
   <Hero />
   </div>;
 };

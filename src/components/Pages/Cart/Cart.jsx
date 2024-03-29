@@ -8,9 +8,9 @@ const Cart = () => {
   const navigate = useNavigate();
   const [discount, setDiscount] = useState(0);
   const [promoCode, setPromoCode] = useState("");
-  const { cart, setCart } = useCart();
+  const { cart, setCart,theme } = useCart();
   const [quantities, setQuantities] = useState({});
-  const [clicked, setClicked] = useState(false);
+   
   //const [totalcost, setTotalCost] = useState(1);
 
   const handleIncrement = (productId) => {
@@ -53,7 +53,8 @@ const Cart = () => {
   }
   return (
     <>
-      {cart.length == 0 ? (
+    <div className={'bg-'+theme+'-500'}>
+    {cart.length == 0 ? (
         <div className="flex justify-center items-center flex-col">
           <img className="  w-[70vw] h-[80vh] " src={ss} />{" "}
           <button
@@ -65,8 +66,8 @@ const Cart = () => {
         </div>
       ) : (
         <div className="container mx-auto mt-10">
-          <div className="flex shadow-md my-10">
-            <div className="w-3/4 bg-white px-10 py-10">
+          <div className="flex shadow-md mt-10">
+            <div className="w-3/4   px-10 py-10">
               <div className="flex justify-between border-b pb-8">
                 <h1 className="font-semibold text-2xl">Shopping Cart</h1>
                 <h2 className="font-semibold text-2xl"> {cart.length} Items</h2>
@@ -93,7 +94,7 @@ const Cart = () => {
                 >
                   <div className="flex w-2/5">
                     <div className="w-20">
-                      <img className="h-24" src={item.thumbnail} alt="" />
+                      <img className="h-24 w-24" src={item.thumbnail} alt="" />
                     </div>
 
                     <div className="flex flex-col justify-between ml-4 flex-grow">
@@ -106,7 +107,7 @@ const Cart = () => {
                       </div>
 
                       <button
-                        className="font-semibold hover:text-red-500 text-gray-500 text-xs w-11"
+                        className="font-semibold hover:text-red-500 text-black text-xs w-11"
                         onClick={() => {
                           handleRemove(item.id);
                         }}
@@ -156,9 +157,9 @@ const Cart = () => {
 
               <button
                 onClick={() => navigate("/allproducts")}
-                className="flex font-semibold text-indigo-600 text-sm mt-10"
+                className="flex font-semibold text-black text-sm mt-10"
               >
-                Continue Shopping
+                🔙-Continue Shopping
               </button>
             </div>
 
@@ -217,6 +218,7 @@ const Cart = () => {
           </div>
         </div>
       )}
+    </div>
     </>
   );
 };

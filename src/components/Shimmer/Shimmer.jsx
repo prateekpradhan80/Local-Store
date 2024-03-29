@@ -2,7 +2,7 @@ import React from "react";
 
 const Shimmer = () => {
   const ArrayData = new Array(8).fill("");
-  console.log(ArrayData);
+  
   return (
     <div className="flex flex-wrap justify-center gap-7 mt-10">
       {ArrayData.map((element, index) => (

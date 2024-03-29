@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../Context/CartProvider";
 const Hero = () => {
   const [popularProduct, setPopularProduct] = useState([]);
-  const { addToCart } = useCart();
+  const { addToCart ,theme } = useCart();
   useEffect(() => {
     fetch("https://dummyjson.com/products/search?q=phone")
       .then((res) => res.json())
@@ -25,10 +25,10 @@ const Hero = () => {
     addToCart(item);
   }
   return (
-    <>
+    <div className={'bg-'+theme+'-500'}>
       {/*    Banner image  */}
       <div className="h-[90vh]">
-        <img src={baner} className=" h-full w-full" />
+        <img src={baner} className=" h-full w-full  " />
       </div>
 
       {/*     secure payment   ----- Easy return    */}
@@ -55,7 +55,7 @@ const Hero = () => {
       <div>
         {/*     that paragraph   /// Popular products and hovered image  */}
 
-        <section className="text-gray-600 body-font mb-5 ">
+        <section className="text-gray-600 body-font pb-10 ">
           <div className="container px-5 py-10  mx-auto my-5 flex flex-wrap">
             {/*     that paragraph  */}
 
@@ -172,7 +172,7 @@ const Hero = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

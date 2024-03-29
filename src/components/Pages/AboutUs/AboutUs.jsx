@@ -1,9 +1,16 @@
 import React from "react";
 
+import { useCart } from "../../Context/CartProvider";
 const AboutUs = () => {
+  const{theme}=useCart()
   return (
-    <div>
-      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+    <div  className={`bg-${theme}-500 `}>
+  
+      <div className="flex justify-end mt-5">
+       
+      </div>
+
+      <section className="overflow-hidden  pb-12  mt-10    ">
         <div className="  mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -626,18 +633,12 @@ const AboutUs = () => {
                 <p className="mb-8 text-2xl text-body-color font-serif dark:text-dark-6 text-red-900 animate-pulse  ">
                   HAPPY SHOPPING ... THANK YOU (❁´◡`❁)
                 </p>
-                <a
-                  href="javascript:void(0)"
-                  className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-primary hover:bg-opacity-90"
-                >
-                  Get Started
-                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="flex mb-4 justify-center flex-wrap    ">
+      <div className="flex   justify-center flex-wrap    ">
         <div className="w-1/3 bg-gray-200 m-4 rounded-2xl p-2 hover:bg-red-200">
           <div className="h-full text-center">
             <img
@@ -645,7 +646,7 @@ const AboutUs = () => {
               className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Narendra_modi.jpg/640px-Narendra_modi.jpg"
             />
-            <p   className="leading-relaxed">
+            <p className="leading-relaxed">
               It is the best company has the customer relations about any
               details of package. In any case, they are really willing to solve
               the problem. There are lots of food variety compare to other
@@ -673,69 +674,69 @@ const AboutUs = () => {
               issues, and shirts are always delivered on time.
             </p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2   className="text-gray-900 font-medium title-font tracking-wider text-sm">
+            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
               Prateek Pradhan
             </h2>
             <p className="text-gray-500">Engineer</p>
           </div>
         </div>
         <div className=" w-1/3 bg-gray-200 m-4 rounded-2xl p-2 hover:bg-red-200">
-          <div   className="h-full text-center">
+          <div className="h-full text-center">
             <img
               alt="testimonial"
-                className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               src="https://www.shutterstock.com/image-photo/cheerful-young-indian-woman-outdoors-260nw-520322230.jpg"
             />
-            <p   className="leading-relaxed">
+            <p className="leading-relaxed">
               It's not called Best grocery for nothing. I've been shopping from
               them for a few years now and there is always good availability,
               fast delivery and most often the cheapest prices' Customer service
               has always been very good too.
             </p>
-            <span   className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2   className="text-gray-900 font-medium title-font tracking-wider text-sm">
+            <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
               Srilekha Sahoo
             </h2>
-            <p   className="text-gray-500">Verified Customer</p>
+            <p className="text-gray-500">Verified Customer</p>
           </div>
         </div>
-        <div   className=" w-1/3 bg-gray-200 m-4 rounded-2xl p-2 hover:bg-red-200">
-          <div   className="h-full text-center">
+        <div className=" w-1/3 bg-gray-200 m-4 rounded-2xl p-2 hover:bg-red-200">
+          <div className="h-full text-center">
             <img
               alt="testimonial"
-                className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               src="https://t3.ftcdn.net/jpg/04/32/15/18/360_F_432151892_oQ3YQDo2LYZPILlEMnlo55PjjgiUwnQb.jpg"
             />
-            <p   className="leading-relaxed">
+            <p className="leading-relaxed">
               I ordered grazing seed mix. Great to be on the plot, decide to
               look for some seed to cover an area I have available, go on the
               internet on my phone, order it from Local Store, and have it
               delivered a day later.
             </p>
-            <span   className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2   className="text-gray-900 font-medium title-font tracking-wider text-sm">
+            <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
               Srikantha Kamu
             </h2>
-            <p   className="text-gray-500">Indian Farmer</p>
+            <p className="text-gray-500">Indian Farmer</p>
           </div>
         </div>
         <div className=" w-1/3 bg-gray-200 m-4 rounded-2xl p-2 hover:bg-red-200">
-          <div   className="h-full text-center">
+          <div className="h-full text-center">
             <img
               alt="testimonial"
-                className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+              className="w-32 h-32 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               src="https://i.pinimg.com/736x/f6/8b/07/f68b07afcf0acea994b7681e9caaff35.jpg"
             />
-            <p   className="leading-relaxed">
+            <p className="leading-relaxed">
               Fast and nicely packed shipping. Nice product quality. A bit pricy
               compared local groceries in West Midlands but definitely is a good
               opportunity to get these unique goods.
             </p>
-            <span   className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2   className="text-gray-900 font-medium title-font tracking-wider text-sm">
+            <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
               Sritam Sahu
             </h2>
-            <p   className="text-gray-500">UI Develeoper</p>
+            <p className="text-gray-500">UI Develeoper</p>
           </div>
         </div>
       </div>

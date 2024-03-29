@@ -1,9 +1,10 @@
 
 import React from 'react'
-
+import { useCart } from '../../Context/CartProvider'
 const Contact = () => {
+  const{theme}=useCart();
   return (
-    <div>
+    <div className={'bg-'+theme+'-500'}>
       
       <section className="text-gray-600 body-font relative">
   <div className="absolute inset-0 bg-gray-300 m-12">

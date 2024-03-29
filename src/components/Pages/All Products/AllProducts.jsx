@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import productImg from "../../assets/productImg.jpg"; 
 import Products from "../Products/Products";
+import { useCart } from "../../Context/CartProvider";
 export const productInfoLoader = async () => {
   const response = await fetch("https://dummyjson.com/products/categories");
   return response.json();
@@ -12,6 +13,7 @@ const AllProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState();
   const [liveProduct, setliveProduct] = useState(true);
   const product = useLoaderData();
+  const{theme}=useCart()
   
   /*   using this you can also create but it is taking some time to render , but using loader it takes less to time render
   const [product, setProduct] = useState([]);
@@ -29,7 +31,8 @@ const AllProducts = () => {
   
   return (
     <>
-      <div className="relative">
+    <div className={'bg-'+theme+'-500'}>
+    <div className="relative    ">
         <img className="w-full h-[40vh]" src={productImg}></img>
         <div className="absolute top-7">
           <h1 className=" ml-5 text-3xl font-serif text-white">All PRODUCTS</h1>
@@ -56,6 +59,8 @@ const AllProducts = () => {
         />
         ;
       </div>
+    </div>
+     
     </>
   );
 };
